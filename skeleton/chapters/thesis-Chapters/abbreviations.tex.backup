@@ -1,0 +1,160 @@
+%fix small cap vs italic
+
+\chapter*{Abbreviations}
+\label{sec-ABB}
+
+
+\thispagestyle{plain}
+
+ \begin{xtabular}{ll}
+
+
+{\sc a} & subject of transitive clause\\
+$A$ & agent(ive) \\ 
+{\sc abl} & ability (modality)\\
+ {\sc abst} & abstract (semantic feature)\\
+ {\sc advl} & adverb locative \\
+ {\sc advt} & adverb time \\
+{\sc advm} &  adverb manner\\
+{\sc art} &  article\\
+
+
+CB  & Clever Boy story\\
+{\sc clf} & classifier\\
+{\sc cli} & Chakali (ISO 639-3 code)\\
+ {\sc conc} & concrete, animate, non-human (semantic feature)\\
+ {\sc cond} & conditional particle\\
+ {\sc conn} &  connective\\
+CPS & Containment Picture Series\\
+ {\sc cras} & crastinal tense (futur tomorrow) \\
+
+ {\sc dem} & demonstrative \\
+ {\sc dist} & distal \\%used at all??
+ {\sc distr} & distributive \\
+ {\sc dub} & dubitative \\%used at all??
+%{\sc dwn} & downward (as in path)\\
+
+{\sc e} & extended argument\\
+EVC & extended verb complex\\
+{\sc etym} & etymology\\
+{\sc exst} & existential verb\\
+
+
+ {\sc foc} & focus \\
+{\sc fut} &  futur\\
+
+
+{\sc g}{\it a} & non-human gender  \\
+{\sc g}{\it b} &  human gender\\
+{\it gl} & glossed as\\
+
+{\sc head} & head of phrase \\ %head
+ {\sc hest} & hesternal tense (past yesterday) \\
+ {\sc hum} & human   (semantic feature)\\
+
+%{\sc icpt} & inceptive\\ %encode intial point of an event
+{\sc ident} & identificational verb\\ %encode intial point of an event
+{\sc imps} & impersonal\\ %encode intial point of an event
+{\it interj} & interjection\\ %like gafra, greetings,...
+{\sc ipfv} &  imperfective aspect\\%ongoing, habitual, repeated,
+%or generallycontaining internal structure.
+%{\sc irr} &  irrealis aspect\\%ongoing, habitual, repeated,
+
+
+LB  & Law Breaker story\\
+{\it lit.} & literal meaning\\
+
+ {\sc mod} &  modality \\
+
+{\sc num} &  numeral\\ %numeral
+
+{\sc o} or {\sc obj} & object of transtive clause\\
+{\sc obl} & oblique argument\\
+ {\sc ono} & onomatopoeia \\
+
+
+%\thispagestyle{empty}
+
+\thispagestyle{plain}
+
+{\sc p} or  {\sc pred} & predicate\\
+%{\sc path} & path\\
+{\sc pfv} & perfective aspect \\%perfective aspect, which marks an action as
+%complete
+{\sc pl} or {\it pl} &  plural \\
+PoS & Part of Speech\\
+ {\sc postp} & postposition \\
+{\sc pro} & pronoun \\ %head
+ {\sc prop} & property  \\ %property
+ {\it propn} & proper noun  \\ %property
+ {\sc prox} & proximal \\
+{\sc psed} & possessed\\ 
+{\sc psor} & possessor\\
+PSPV&  Picture Series for Positional Verbs \\
+{\sc pst} & past  \\
+
+ {\it pv} & preverb particle \\
+ {\sc pv} &Pluractional verb \\
+
+
+
+{\sc q} & question word, phrase or intonation\\
+{\sc qual} &  qualifier\\
+{\sc quant} &  quantifier\\
+
+\thispagestyle{plain}
+
+$R$ & recipient \\ 
+ {\sc recp} & reciprocal \\
+ {\sc reln} & relational noun \\
+%{\sc rl} &  realis aspect\\%ongoing, habitual, repeated,
+
+{\sc s} or {\sc subj}& subject of intransitive clause\\
+{\sc sg} or {\it sg}  & singular \\  
+SPS & Support  Picture Series\\
+{\sc st} &strong pronoun\\
+
+
+{\sc tam} & tense, aspect and mood \\
+$T$ & theme \\  
+{\sc trm} & topological relation marker \\
+TRPS& Topological Relations Picture Series\\
+
+%{\sc up} & upward (as in path)\\
+{\it v} & verb\\
+
+%{\sc w} & weak pronoun\\
+{\sc wk}  &weak pronoun\\
+
+ \textasteriskcentered  & ungrammatical expression\\ 
+ \textasteriskcentered   & Proto-form\\
+-  or $]$& morpheme boundary\\
+$[    ]$ & phonetic representation\\
+$[  ]_{X}$ &   structure of type X\\
+\#  or $]_{wb}$ &  word boundary\\
+ \#\# &utterance-final boundary\\
+$]_{\sigma}$ &  syllable  boundary\\
+X|Y & either X or Y\\
+(Y) & optional Y\\
+(Y) & covert Y\\
+,  & pause\\
+%=& clitic boundary\\
+< x & from root x\\
+%\thispagestyle{empty}
+
+\end{xtabular}
+\thispagestyle{plain}
+%\thispagestyle{plain}
+% 
+% The dash symbol (-) is
+% used to identify the edges of morphological units (e.g. kæt-s `cats'),  while 
+% the hash symbol (\#) separates word units. \footnote{In discussing the
+% morphology the symbol $]$ identifies an
+% affix/stem/root boundary,  $]_{wb}$  a word boundary and  $]_{\sigma}$  a
+% syllable  boundary. In the rule format,   the material following / and
+%preceding
+% \_ represents the context. The symbol C* indicates a condition where any
+%number
+% of consonant (usually zero, one or two) can occur. A prose translation is
+%given
+% under each rule.}  

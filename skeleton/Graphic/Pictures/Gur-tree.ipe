@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70010" creator="Ipe 7.0.10">
+<info created="D:20100913090204" modified="D:20100921154012"/>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+<path fill="sym-fill">
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+<path fill="sym-fill">
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="small" value="\small"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<text layer="alpha" matrix="1 0 0 1 -31 -10" transformations="translations" pos="287.5 585" stroke="black" type="label" width="35.41" height="6.726" depth="2.24" valign="baseline" size="small">Gur (96)</text>
+<text matrix="1 0 0 1 -37 -18" transformations="translations" pos="292.5 560" stroke="black" type="label" width="49.429" height="6.726" depth="2.24" valign="baseline" size="small">Central (69)</text>
+<text matrix="1 0 0 1 -85 -52" transformations="translations" pos="215.5 564" stroke="black" type="label" width="56.104" height="6.726" depth="2.24" valign="baseline" size="small">Northern (38)</text>
+<text matrix="1 0 0 1 -1 -47" transformations="translations" pos="386.5 559" stroke="black" type="label" width="55.828" height="6.726" depth="2.24" valign="baseline" size="small">Southern (31)</text>
+<text matrix="1 0 0 1 -56.213 36.6864" transformations="translations" pos="90.5 445" stroke="black" type="label" width="44.924" height="6.726" depth="2.24" valign="baseline" size="small">Bwamu (4)</text>
+<text matrix="1 0 0 1 7.45072 29.6943" transformations="translations" pos="156.5 451" stroke="black" type="label" width="50.451" height="6.726" depth="2.24" valign="baseline" size="small">Kurumfe (1)</text>
+<text matrix="1 0 0 1 -142.712 32.1697" transformations="translations" pos="233.5 449" stroke="black" type="label" width="57.339" height="6.726" depth="2.24" valign="baseline" size="small">Oti-Volta (33)</text>
+<path fill="white">
+247.92 574.355 m
+63.8964 561.929 l
+</path>
+<text matrix="1 0 0 1 -23.5706 -6.50888" transformations="translations" pos="279.281 486.781" stroke="black" type="label" width="63.408" height="6.726" depth="2.24" valign="baseline" size="small">Dogoso-Khe (3)</text>
+<text matrix="1 0 0 1 -39.2143 -4.84227" transformations="translations" pos="372.18 485.598" stroke="black" type="label" width="36.221" height="6.726" depth="2.24" valign="baseline" size="small">Dyan (1)</text>
+<text matrix="1 0 0 1 21.8935 -6.50888" transformations="translations" pos="405.908 487.373" stroke="black" type="label" width="63.473" height="6.726" depth="2.24" valign="baseline" size="small">Gan-Dogose (3)</text>
+<text matrix="1 0 0 1 -111.243 -6.0257" transformations="translations" pos="490.524 486.781" stroke="black" type="label" width="41.605" height="6.726" depth="2.24" valign="baseline" size="small">Grusi (23)</text>
+<text matrix="1 0 0 1 -50.8876 -13.6095" transformations="translations" pos="550.879 494.473" stroke="black" type="label" width="80.484" height="6.726" depth="2.24" valign="baseline" size="small">Girma-Tyurama (2)</text>
+<text transformations="translations" pos="258.733 610.776" stroke="black" type="label" width="78.841" height="6.726" depth="2.24" valign="baseline" size="small">Volta-Congo (1362)</text>
+<text transformations="translations" pos="257.55 645.687" stroke="black" type="label" width="79.121" height="6.726" depth="2.24" valign="baseline" size="small">Niger-Congo (1532)</text>
+<path stroke="black" dash="dotted">
+258.323 643.976 m
+258.323 619.529 l
+</path>
+<path stroke="black" dash="dotted">
+258.116 608.548 m
+258.116 584.723 l
+</path>
+<path stroke="black">
+256.649 540.468 m
+133.404 521.911 l
+</path>
+<path stroke="black">
+291.662 540.468 m
+383.745 521.561 l
+</path>
+<path stroke="black" dash="dotted">
+261.269 539.95 m
+229.986 529.798 l
+</path>
+<path stroke="black" dash="dotted">
+263.341 539.536 m
+247.389 528.348 l
+</path>
+<path stroke="black" dash="dotted">
+265.206 539.329 m
+262.098 528.348 l
+</path>
+<path stroke="black" dash="dotted">
+267.485 539.536 m
+269.764 528.348 l
+</path>
+<path stroke="black" dash="dotted">
+270.592 539.536 m
+279.501 527.934 l
+</path>
+<path stroke="black" dash="dotted">
+285.716 539.536 m
+311.199 529.177 l
+</path>
+<path stroke="black" dash="dotted">
+282.194 539.743 m
+295.246 528.555 l
+</path>
+<path stroke="black" dash="dotted">
+280.122 539.121 m
+289.652 528.348 l
+</path>
+<path stroke="black" dash="dotted">
+276.186 539.121 m
+282.816 527.934 l
+</path>
+<path stroke="black">
+258.576 574.341 m
+258.576 550.102 l
+</path>
+<path stroke="black">
+129.57 509.699 m
+35.5121 490.846 l
+</path>
+<path stroke="black">
+129.156 509.699 m
+92.9 489.396 l
+</path>
+<path stroke="black">
+129.156 509.492 m
+163.961 488.982 l
+</path>
+<text matrix="1 0 0 1 -44.6278 -5.14419" transformations="translations" pos="48.1499 456.041" stroke="black" type="label" width="58.746" height="6.726" depth="2.24" valign="baseline" size="small">Buli-Koma (2)</text>
+<text matrix="1 0 0 1 -8.26517 -5.71058" transformations="translations" pos="131.435 456.248" stroke="black" type="label" width="45.768" height="6.726" depth="2.24" valign="baseline" size="small">Eastern (4)</text>
+<text matrix="1 0 0 1 32.8097 -2.90552" transformations="translations" pos="141.049 453.149" stroke="black" type="label" width="43.09" height="6.726" depth="2.24" valign="baseline" size="small">Gurma (9)</text>
+<text matrix="1 0 0 1 -148.145 -4.14201" transformations="translations" pos="214.576 454.55" stroke="black" type="label" width="52.298" height="6.726" depth="2.24" valign="baseline" size="small">Western (16)</text>
+<text matrix="1 0 0 1 147.064 58.5268" transformations="translations" pos="75.5756 392.227" stroke="black" type="label" width="65.785" height="6.726" depth="2.24" valign="baseline" size="small">Yow-Nawdm (2)</text>
+<path stroke="black" dash="dotted">
+164.652 478.287 m
+164.652 469.669 l
+</path>
+<path stroke="black" dash="dotted">
+34.5663 479.634 m
+34.5663 470.746 l
+</path>
+<path stroke="black">
+90.856 478.287 m
+6.01738 459.434 l
+</path>
+<path stroke="black">
+90.5867 478.287 m
+67.4244 459.165 l
+</path>
+<path stroke="black">
+90.3174 478.287 m
+122.906 459.704 l
+</path>
+<path stroke="black">
+90.5867 478.018 m
+173.54 459.704 l
+</path>
+<path stroke="black">
+90.5867 478.018 m
+223.097 459.704 l
+</path>
+<path stroke="black" dash="dotted">
+256.08 478.155 m
+256.08 468.832 l
+</path>
+<path stroke="black" dash="dotted">
+333.357 477.948 m
+333.357 468.625 l
+</path>
+<path stroke="black" dash="dotted">
+428.037 478.155 m
+428.037 468.625 l
+</path>
+<path stroke="black" dash="dotted">
+500.134 479.191 m
+500.134 468.003 l
+</path>
+<text matrix="1 0 0 1 -4.76505 2.69329" transformations="translations" pos="383.908 448.322" stroke="black" type="label" width="52.298" height="6.726" depth="2.24" valign="baseline" size="small">Western (10)</text>
+<text matrix="1 0 0 1 -32.1123 -2.48611" transformations="translations" pos="472.165 453.501" stroke="black" type="label" width="51.496" height="6.726" depth="2.24" valign="baseline" size="small">Northern (6)</text>
+<text matrix="1 0 0 1 -35.22 -2.07176" transformations="translations" pos="358.425 453.087" stroke="black" type="label" width="45.768" height="6.726" depth="2.24" valign="baseline" size="small">Eastern (7)</text>
+<path stroke="black" dash="dotted">
+440.053 447.286 m
+440.053 434.648 l
+</path>
+<path stroke="black" dash="dotted">
+323.205 446.457 m
+323.205 435.477 l
+</path>
+<path stroke="black" dash="dotted">
+2.81058 448.26 m
+2.81058 436.678 l
+</path>
+<path stroke="black" dash="dotted">
+123.201 446.913 m
+123.201 436.409 l
+</path>
+<path stroke="black" dash="dotted">
+174.104 447.452 m
+174.104 438.294 l
+</path>
+<path stroke="black" dash="dotted">
+223.122 447.721 m
+223.122 437.217 l
+</path>
+<text matrix="0.00266781 0 0 1.17202 360.766 -139.99" transformations="translations" pos="449.246 413.499" stroke="black" type="minipage" width="196.4" height="75.135" depth="70.32" valign="baseline" size="small">\begin{itemize}
+\item  Chakali  [cli] (Ghana)
+\item  Deg  [mzw] (Ghana)
+\item Paasaal  [sig] (Ghana)
+\item Phuie  [pug] (Burkina Faso)
+\item Sisaala, Tumulung  [sil] (Ghana)
+\item Sisaala, Western  [ssl] (Ghana)
+\item Sissala  [sld] (Burkina Faso)
+\item Tampulma  [tpm] (Ghana)
+\item Vagla  [vag] (Ghana)
+\item  Winy\&apos;e  [kst] (Burkina Faso) 
+\end{itemize}</text>
+<path matrix="0.907226 0 0 0.988837 35.2467 4.98378" stroke="black">
+379.465 446.444 m
+379.92 278.488 l
+</path>
+<text matrix="0.00279968 0 0 2.2062 47.0522 -525.447" transformations="translations" pos="449.246 413.499" stroke="black" type="minipage" width="196.4" height="37.825" depth="32.91" valign="baseline" size="small">\begin{itemize}
+\item Dagaare, Southern  [dga] (Ghana) 
+\item Gurune  [gur] (Ghana)
+\item Wali  [wlx] (Ghana) 
+\item Dagbani  [dag] (Ghana) 
+\item Mampruli  [maw] (Ghana)
+\end{itemize}</text>
+<path stroke="black">
+65.1886 444.545 m
+65.3479 358.009 l
+</path>
+</page>
+</ipe>

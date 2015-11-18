@@ -1,0 +1,77 @@
+<ipe version="60032" creator="Ipe 6.0 preview 32">
+<info created="D:20090721111332" modified="D:20091130132905" bbox="cropbox"/>
+<ipestyle>
+</ipestyle>
+<ipestyle>
+</ipestyle>
+<ipestyle>
+</ipestyle>
+<ipestyle>
+</ipestyle>
+<page gridsize="16">
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<path layer="alpha" stroke="black" matrix="-0.918924 0 0 0.808984 459.642 24.885" pen="normal">
+240.018 319.721 m
+239.749 176.169 l
+</path>
+<text stroke="black" matrix="1 0 0 1 -1.36745 -3.87257" pos="233.554 176.708" type="label" width="4.981" height="6.42" depth="0" valign="baseline" size="normal">0</text>
+<text stroke="black" matrix="1 0 0 1 -2.26208 -7.6088" pos="255.419 176.036" type="label" width="7.195" height="6.808" depth="0" valign="baseline" size="normal">C</text>
+<text stroke="black" matrix="1 0 0 1 -2.26208 -8.22573" pos="288.527 176.653" type="label" width="7.195" height="6.808" depth="0" valign="baseline" size="normal">T</text>
+<text stroke="black" matrix="1 0 0 0.924645 -1.23386 5.039382" pos="319.991 176.036" type="label" width="6.78" height="6.808" depth="0" valign="baseline" size="normal">P</text>
+<path stroke="black" matrix="0 0 0 0.928571 234.649 12.8531" dash="dotted" pen="normal">
+233.415 200.096 m
+233.415 208.734 l
+</path>
+<text stroke="black" pos="232.181 210.996" type="label" width="4.981" height="6.42" depth="0" valign="baseline" size="normal">8</text>
+<text stroke="black" matrix="1 0 0 1 -5.14108 -0.822573" pos="232.592 223.951" type="label" width="9.963" height="6.42" depth="0" valign="baseline" size="normal">10</text>
+<text stroke="black" matrix="1 0 0 1 -7.40315 -0.411286" pos="234.649 239.991" type="label" width="9.963" height="6.42" depth="0" valign="baseline" size="normal">12</text>
+<text stroke="black" matrix="1 0 0 1 -5.75801 -0.822573" pos="233.004 256.237" type="label" width="9.963" height="6.42" depth="0" valign="baseline" size="normal">14</text>
+<text stroke="black" matrix="1 0 0 1 -5.75801 -1.02822" pos="232.592 271.66" type="label" width="9.963" height="6.42" depth="0" valign="baseline" size="normal">16</text>
+<text stroke="black" matrix="1 0 0 1 -2.26208 -2.26208" pos="234.237 190.431" type="label" width="4.981" height="6.42" depth="0" valign="baseline" size="normal">2</text>
+<path stroke="black" dash="dotted" pen="normal">
+255.83 178.504 m
+255.83 205.855 l
+</path>
+<path stroke="black" dash="dotted" pen="normal">
+287.646 178.4 m
+287.524 204.318 l
+</path>
+<path stroke="black" pen="normal">
+255.643 205.048 m
+255.765 218.433 l
+</path>
+<path stroke="black" pen="normal">
+287.524 203.71 m
+287.402 218.433 l
+</path>
+<path stroke="black" pen="normal">
+255.643 218.433 m
+287.281 218.433 l
+</path>
+<path stroke="black" dash="dotted" pen="normal">
+320.409 176.167 m
+320.25 202.742 l
+</path>
+<path stroke="black" matrix="1.51544 0 0 1.58225 -139.958 -127.349" pen="normal">
+271.529 218.719 m
+271.845 249.882 l
+</path>
+<path stroke="black" pen="normal">
+374.487 206.581 m
+374.487 206.581 l
+</path>
+<path stroke="black" pen="normal">
+320.188 202.683 m
+320.065 267.775 l
+</path>
+<path stroke="black" pen="normal">
+271.889 267.775 m
+319.942 267.53 l
+</path>
+<path stroke="black" pen="normal">
+296.284 267.653 m
+296.284 269.614 l
+</path>
+</page>
+</ipe>
