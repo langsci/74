@@ -252,12 +252,14 @@ class Etymology ():
       def toLatex(self):
           if self.form or self.gloss or self.source:
               print cmd('etymology','',indent=6).encode('utf-8')
+          if self.source:
+              print cmd('etymologysrc',self.source,indent=8).encode('utf-8')
           if self.form:
               print cmd('etymologyform',self.form,indent=8).encode('utf-8')
           if self.gloss:
-              print cmd('etymologygloss',self.gloss,indent=8).encode('utf-8')
-          if self.source:
-              print cmd('etymologysrc',self.source,indent=8).encode('utf-8')
+            print cmd('etymologygloss',self.gloss,indent=8).encode('utf-8')
+          if self.form or self.gloss or self.source:
+            print cmd('etymologycloser','',indent=6).encode('utf-8')
           
 
 class MimimalLexReferences():
