@@ -342,7 +342,9 @@ class LexEntryReflink():
           self.vet=self.vet.replace('.','').replace(' ','')
           
     def toLatex(self):
-          s = "\\type%s{\hyperlink{%s}{%s}}%%"%(self.vet,self.target,self.alt)
+          latexalt = re.sub('(.*)([0-9]+)$',r'\\textsuperscript{\2}\1', self.alt)
+          #latexalt = self.alt.replace('1','\\textsuperscript{1}')
+          s = "\\type%s{\hyperlink{%s}{%s}}%%"%(self.vet,self.target,latexalt)
           print s.encode('utf8')
         
          
