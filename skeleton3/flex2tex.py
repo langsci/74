@@ -302,8 +302,8 @@ class LexReflink():
             self.targets = []
             return
           self.type_ = e.find('LexReferenceLink_Type/Link/Alt').attrib.get('abbr')
-          if self.type_ == None:
-            self.type_ = e.find('LexReferenceLink_Type/Link/Alt').attrib.get('revabbr')          
+          #if self.type_ == None:
+            #self.type_ = e.find('LexReferenceLink_Type/Link/Alt').attrib.get('revabbr')          
           try:
             self.type_ = self.type_.replace('.','').replace(' ','')
           except AttributeError:
