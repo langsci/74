@@ -7,7 +7,7 @@ import re
 CONSONANTS = u'bcdfghjkḱlĺmḿńǹŋpṕrŕsśtvwzʒ'
 ONSET = u'bcdfghjkḱlĺmḿńǹnŋpṕrŕsśtvwzʒGKŊʧʤ'
 CODAS = u'mnŋgkl'
-VOWELS = u'aAáÁàâãāãȁeéèẽēȅɛəiíìĩīȉɪoóòõṍȭōȍɔuúùũṹūȕʊnʊ̀ʊʊ́ɔɛɪ́ɪ̄ɛ̄ɪ́ɪ̀'#n
+VOWELS = u'aAáÁàâãāãȁeéèẽēȅɛəiíìĩīȉɪoóòõṍȭōȍɔuúùũṹūȕʊnʊʊ́ɔɛɪ́ɪ̄ɛ̄ɪ́'#n
 SECONDGLYPHS = u"mpbʃʒ $"
 currentletter = 'x'
 
