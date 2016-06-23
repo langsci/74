@@ -77,8 +77,9 @@ class LexEntry():
      
         if self.firstwordofletter==True:
           try:
-            print u"\\end{letter}\n\\begin{letter}{%s %s}"""%(self.headword.word[0].upper().encode('utf-8'),
-                                                            self.headword.word[0].lower().encode('utf-8'))
+            print u"\\end{letter}\n\\begin{letter}{%s}"""%(self.headword.word[0].lower().encode('utf-8'),
+                                                            #self.headword.word[0].lower().encode('utf-8')
+                                                            )
           except UnicodeError:
             pass
         self.headword.toLatex()
@@ -86,10 +87,10 @@ class LexEntry():
             print '{\\fixpron}','%%',self.vver.lexentryreflinks
         for p in self.pronunciations:
             p.toLatex()
-        if self.literalmeaning:
-            print cmd('literalmeaning',self.literalmeaning)   
         if self.pos:
             print cmd("pos", self.pos)
+        if self.literalmeaning:
+            print cmd('literalmeaning',self.literalmeaning)   
         if self.mlr:
             self.mlr.toLatex()
         if self.vfebr:
@@ -157,6 +158,10 @@ class Sense():
     def __init__(self,s):
         self.anchor = s.attrib.get('id',False)
         self.definition = getText(s,'LexSense_Definition','AStr')
+        try:
+          self.definition = self.definition.strip()
+        except AttributeError:
+          pass
         self.examples = [Example(x) for x in s.findall('.//LexExampleSentence')]     
         self.references = [LexReflink(l) for l in (s.findall('.//LexReferenceLink'))]
         self.scientificname = getText(s,'LexSense_ScientificName','Str')
@@ -297,15 +302,19 @@ class LexReflink():
           self.targets = [self.getTargets(l) for l in e.findall('LexReference_Targets/Link')]  
 
     def toLatex(self):
-        targets = ''
+        targets = []
         for t,s in self.targets:
           if not s:
               try:
-                  s = linkd[t]
+                s = linkd[t]
               except KeyError:
-                  s = '\\error{No label for link!}'                
-          targets += "\hyperlink{%s}{%s}"%(t,s)        
-        print cmd('type%s'%self.type_,targets).encode('utf8')
+                s = '\\error{No label for link!}'        
+          #take care of homographs
+          s = re.sub('(.*[^ 0-9])([0-9]+)',r'\\textsuperscript{\2}\1', s)        
+          #take care of sense numbers
+          s = re.sub('(.*[^ 0-9]) ([0-9]+)$',r'\1\\textsuperscript{\2}', s)
+          targets.append("\hyperlink{%s}{%s}"%(t,s))        
+        print cmd('type%s'%self.type_,'; '.join(targets)).encode('utf8')
 
 class VariantFormEntryBackRefs ():
       def __init__(self,e):
