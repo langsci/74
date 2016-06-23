@@ -5,18 +5,30 @@ import xml.etree.ElementTree as etree
 import re
 
 CONSONANTS = u'bcdfghjkḱlĺmḿńǹŋpṕrŕsśtvwzʒ'
-VOWELS = u'aAáÁàâãāȁeéèẽēȅɛiíìĩīȉoóòõṍȭōȍɔuúùũṹūȕn'
+ONSET = u'bcdfghjkḱlĺmḿńǹnŋpṕrŕsśtvwzʒGKŊʧʤ'
+CODAS = u'mnŋgkl'
+VOWELS = u'aAáÁàâãāãȁeéèẽēȅɛəiíìĩīȉɪoóòõṍȭōȍɔuúùũṹūȕʊnʊ̀ʊʊ́ɔɛɪ́ɪ̄ɛ̄ɪ́ɪ̀'#n
 SECONDGLYPHS = u"mpbʃʒ $"
+currentletter = 'x'
 
 def hyphenate(s):
-    p = u"(?<=[%s])([%s])(?![%s])"%(VOWELS,CONSONANTS,SECONDGLYPHS)
-    tmp = re.sub(p,r"\\-\1",s)  
-    prefix = u'\-'
-    if '\-' in tmp:
-        prefix = ''
-    tmp2 = prefix+re.sub(u"\\\\-(?=.[ ,])",u'',tmp)
-    tmp3 = re.sub(u"\\\\-(?=.$)",u'',tmp2)
-    return tmp3
+    #p = u"(?<=[%s])([%s])(?![%s])"%(VOWELS,CONSONANTS,SECONDGLYPHS)
+    #temporarily get rid off digraphs
+    subs = [(u'tʃ',u'ʧ'),
+            (u'dʒ',u'ʤ'),
+            (u'gb',u'GB'),
+            (u'kp',u'KP'),
+            (u'ŋm',u'ŊM')
+            ]
+    mod = s
+    for sub in subs:
+      mod = mod.replace(sub[0],sub[1])
+      p = u"([%s][%s]?)([%s][^%s ]?)([%s])"%(VOWELS,CODAS,ONSET,VOWELS,VOWELS)
+    tmp = re.sub(p,r"\1\\-\2\3",s)   
+    #reinstate digraphs    
+    for sub in subs:
+      mod = mod.replace(sub[1],sub[0])
+    return tmp
   
 def cmd(c,v, indent=0):
     return 0*u' '+u"\\%s{%s}%%"%(c,v) 
@@ -34,13 +46,18 @@ def getText(e,field,strtype):
 class LexEntry():
   
     def __init__(self,e):
+        global currentletter
         t = e.find('_Self')
         if t != None:
           e=t
         self.ID = e.attrib.get('id', False)
         self.etymology = Etymology(e.find('.//LexEtymology'))
         self.headword = Headword(e.find('LexEntry_HeadWord'),anchor=self.ID)
-        
+        if self.headword.word.startswith(currentletter):
+          self.firstwordofletter = False
+        else:
+          self.firstwordofletter = True
+          currentletter = self.headword.word[0]
         self.literalmeaning = getText(e,'LexEntry_LiteralMeaning','AStr')
         try:
             self.pronunciations = [Pronunciation(p) for p in  e.find('LexEntry_Pronunciations').findall('LexPronunciation')]
@@ -57,6 +74,13 @@ class LexEntry():
           self.plural = hyphenate(self.plural)
     
     def toLatex(self): 
+     
+        if self.firstwordofletter==True:
+          try:
+            print u"\\end{letter}\n\\begin{letter}{%s %s}"""%(self.headword.word[0].upper().encode('utf-8'),
+                                                            self.headword.word[0].lower().encode('utf-8'))
+          except UnicodeError:
+            pass
         self.headword.toLatex()
         if len(self.pronunciations) == 0 and len(self.vver.lexentryreflinks)==0:
             print '{\\fixpron}','%%',self.vver.lexentryreflinks
@@ -82,9 +106,10 @@ class LexEntry():
             print cmd("plural", self.plural).encode('utf8')
 
 class Headword():
-    def __init__(self,e,anchor=False):
+    def __init__(self,e,anchor=False, firstwordofletter=False):
         self.anchor = anchor
         self.homograph = False
+        self.firstwordofletter = firstwordofletter
         if e == None:
           self.word = r"\error{no headword!}"          
           return
@@ -124,9 +149,9 @@ class Pronunciation():
     def toLatex(self): 
         latexipa = self.ipa.replace(u'ꜜ','{\downstep}')
         if self.anchor:
-          print hypercmd('ipa', self.anchor, latexipa, indent=1).encode('utf-8')
+            print hypercmd('ipa',self.anchor, latexipa, indent=1).encode('utf-8')
         else:
-          print cmd('ipa', latexipa, indent=1).encode('utf-8')
+            print cmd('ipa', latexipa, indent=1).encode('utf-8')
     
 class Sense():
     def __init__(self,s):

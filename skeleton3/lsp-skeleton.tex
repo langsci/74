@@ -10,15 +10,9 @@
 % Everything following a % is ignored
 % Some lines start with %. Remove the % to include them
 
-\documentclass[number=??                 %replace by your number in series
-                ,series=algad,     % Choose series abbreviation as appropriate
-                ,isbn=978-3-000000-00-0, %add your isbn here
-                ,url=http://langsci-press.org/catalog/book/0,  %change to the running number of your book
-	        ,output=short             % long|short|inprep              
-	        %,blackandwhite
-% 		,smallfont
-  	        ,draftmode  
-		,biblatex
+\documentclass[output=book
+	      ,modfonts
+	      ,nonflat
 		]{langsci/langscibook}    
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,16 +51,16 @@
 \maketitle                
 \frontmatter
 
-
-    \include{chapters/lsp-cli-preface}
-  \include{chapters/lsp-cli-acknowledgement}
-% % 
-    \include{chapters/lsp-cli-abbreviations}
+% 
+%     \include{chapters/lsp-cli-preface}
+%   \include{chapters/lsp-cli-acknowledgement}
+% % % 
+%     \include{chapters/lsp-cli-abbreviations}
 
 \tableofcontents      
 \mainmatter       
 
-   \include{chapters/lsp-cli-introduction}  
+%    \include{chapters/lsp-cli-introduction}  
    
 
 \newpage
@@ -109,8 +103,8 @@
  \part{Grammatical Outlines}
  \ref{part:gram-part}
 
- \include{chapters/lsp-cli-phonology}
-\include{chapters/lsp-cli-sketchgrammar}
+%  \include{chapters/lsp-cli-phonology}
+% \include{chapters/lsp-cli-sketchgrammar}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
