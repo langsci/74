@@ -192,7 +192,9 @@ class Sense():
         for r in self.references:
             r.toLatex()
         if self.scientificname:
-            print cmd('sciname',self.scientificname)
+            print "%s\n{\\definitioncloser}" % cmd('sciname',self.scientificname)
+        else:
+          print "{\\definitioncloser}"
         for u in self.usagetypes:
             print cmd('usage',u)
         #if self.synpos:
