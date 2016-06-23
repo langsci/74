@@ -38,7 +38,14 @@ def hypercmd(command, anchor, value, indent=0):
 
 def getText(e,field,strtype):
     try:
-        return e.find('%s/%s/Run'%(field,strtype)).text
+        runs = e.findall('%s/%s/Run'%(field,strtype))
+        a = []
+        for run in runs:
+          if run.attrib.get('ws') == 'cli':
+            a.append("\\textsl{%s}" % run.text)
+          else:
+            a.append(run.text)
+        return ''.join(a)
     except AttributeError:
         return False
       
