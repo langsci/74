@@ -6,7 +6,7 @@ import re
 
 CONSONANTS = u'bcdfghjkḱlĺmḿńǹŋpṕrŕsśtvwzʒ'
 ONSET = u'bcdfghjkḱlĺmḿńǹnŋpṕrŕsśtvwzʒGKŊʧʤ'
-CODAS = u'mnŋgkl'
+CODAS = u'mnŋgklr'
 VOWELS = u'aAáÁàâãāãȁeéèẽēȅɛəiíìĩīȉɪoóòõṍȭōȍɔuúùũṹūȕʊnʊʊ́ɔɛɪ́ɪ̄ɛ̄ɪ́'#n
 SECONDGLYPHS = u"mpbʃʒ $"
 currentletter = 'x'
@@ -21,14 +21,14 @@ def hyphenate(s):
             (u'ŋm',u'ŊM')
             ]
     mod = s
+    p = u"([%s][%s]?)([%s][^%s ]?)([%s])"%(VOWELS,CODAS,ONSET,VOWELS,VOWELS)
     for sub in subs:
       mod = mod.replace(sub[0],sub[1])
-      p = u"([%s][%s]?)([%s][^%s ]?)([%s])"%(VOWELS,CODAS,ONSET,VOWELS,VOWELS)
-    tmp = re.sub(p,r"\1\\-\2\3",s)   
+    mod = re.sub(p,r"\1\\-\2\3",mod)   
     #reinstate digraphs    
     for sub in subs:
       mod = mod.replace(sub[1],sub[0])
-    return tmp
+    return mod
   
 def cmd(c,v, indent=0):
     return 0*u' '+u"\\%s{%s}%%"%(c,v) 
