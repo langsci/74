@@ -201,7 +201,8 @@ class Sense():
         if self.scientificname:
             print "%s\n{\\definitioncloser}" % cmd('sciname',self.scientificname)
         else:
-          print "{\\definitioncloser}"
+          if len(self.examples) == 0: #examples come with their own punctuation
+            print "{\\definitioncloser}"
         for u in self.usagetypes:
             print cmd('usage',u)
         #if self.synpos:
