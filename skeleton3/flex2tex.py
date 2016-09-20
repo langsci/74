@@ -394,15 +394,21 @@ lexentries = []
 for entry in root.findall('.//LexEntry'):
   lexentries.append(LexEntry(entry))
   
+ 
 linkd = {}
 for le in lexentries:
   ID = le.ID
-  headword = le.headword.word
+  headword = le.headword.word 
   linkd[le.ID] = headword
    
 
 for le in lexentries:
   print "%"+30*"-"
   le.toLatex()
-
+  #print le.headword.word
+  #print le.headword.homograph
+  #try:
+    #print le.senses[0].definition
+  #except:
+    #pass
   
