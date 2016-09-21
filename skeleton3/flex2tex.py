@@ -41,7 +41,7 @@ def getText(e,field,strtype):
         runs = e.findall('%s/%s/Run'%(field,strtype))
         a = []
         for run in runs:
-          if run.attrib.get('ws') == 'cli':
+          if run.attrib.get('ws') == 'cli' or run.attrib.get('namedStyle') == 'Emphasized Text':
             a.append("\\textsl{%s}" % run.text)
           else:
             a.append(run.text)
@@ -334,8 +334,12 @@ class VariantFormEntryBackRefs ():
           self.lexentryreflinks = [LexEntryReflink(lerl) for lerl in e.findall('LexEntryRefLink')]
       
       def toLatex(self):
-          for l in self.lexentryreflinks:
-              l.toLatex()
+        if len(self.lexentryreflinks)>0:
+          print cmd('varblockopener','')
+        for l in self.lexentryreflinks:
+          l.toLatex()
+        if len(self.lexentryreflinks)>0:
+          print cmd('varblockcloser','')
 
 class VisibleVariantEntryRef ():
       def __init__(self,e): 
@@ -346,8 +350,12 @@ class VisibleVariantEntryRef ():
           self.lexentryreflinks = [LexEntryReflinkV(lerlv) for lerlv in e.findall('LexEntryRefLink')]
       
       def toLatex(self):
+          if len(self.lexentryreflinks)>0:
+            print cmd('varblockopener','')
           for l in self.lexentryreflinks:
-              l.toLatex()
+            l.toLatex()
+          if len(self.lexentryreflinks)>0:
+            print cmd('varblockcloser','')
         
         
 class LexEntryReflink():
