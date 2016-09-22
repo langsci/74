@@ -51,7 +51,7 @@
 \newcommand{\synpos}[1]{ {\itshape #1}.}
 \newcommand{\headword}[1]{{\bfseries #1}\markboth{#1}{#1}}
 % % \newcommand{\hyperheadword}[2]{{\bfseries \hypertarget{#1}{#2}}\markboth{#2}{#2}}
-\newcommand{\sensenr}[1]{ {\bfseries\large  #1)}}
+\newcommand{\sensenr}[1]{ {\bfseries\large  #1}}
 \newcommand{\definition}[1]{ {#1}}
 \newcommand{\hyperdefinition}[2]{\hypertarget{#1}{#2}}
 % \newcommand{\lsgloss}[1]{ {#1}.}
@@ -101,14 +101,16 @@
   \newcommand{\typecntr}[1]{ \textit{\color{red} cntr:} \textbf{#1} }
   \newcommand{\typesyn}[1]{ \textit{Syn:} \textbf{#1} }
   \newcommand{\typeSynT}[1]{ \textit{SynT:} \textbf{#1} }
-  \newcommand{\varblockopener}{ (}
+  \newcommand{\varblockopener}{ (\textit{var.} }
   \newcommand{\varblockcloser}{)}
-  \newcommand{\typevar}[1]{\textit{var.} \textbf{#1}}
-  \newcommand{\typevarof}[1]{\textit{var. of} \textbf{#1}}
+  \newcommand{\varofblockopener}{ (\textit{var. of} }
+  \newcommand{\varofblockcloser}{)}
+  \newcommand{\typevar}[1]{\textbf{#1}}
+  \newcommand{\typevarof}[1]{\textbf{#1}}
 
 
-  \newcommand{\typefocvar}[1]{ (\textit{foc. var.} \textbf{#1}) }
-  \newcommand{\typefocvarof}[1]{ (\textit{foc. var. of} \textbf{#1}) }
+  \newcommand{\typefocvar}[1]{ (\textit{\color{red}foc. var.} \textbf{#1}) }
+  \newcommand{\typefocvarof}[1]{ (\textit{\color{red}foc. var. of} \textbf{#1}) }
 
   \newcommand{\typecntrvar}[1]{ (\textit{\color{red}cntrvar.} \textbf{#1}) }
   \newcommand{\typeofcntrvarof}[1]{ (\textit{\color{red}cntrvar. of} \textbf{#1}) }

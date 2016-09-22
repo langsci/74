@@ -190,7 +190,7 @@ class Sense():
         if self.lsgloss:
             print cmd('lsgloss',self.lsgloss,indent=3).encode('utf8')
         if len(self.examples) == 1:
-            print '{\\startexample}'
+            print '{\\startexample}%'
             self.examples[0].toLatex()
         elif len(self.examples) > 1:
             print '{\\startexample}'
@@ -336,8 +336,7 @@ class VariantFormEntryBackRefs ():
       def toLatex(self):
         if len(self.lexentryreflinks)>0:
           print cmd('varblockopener','')
-        for l in self.lexentryreflinks:
-          l.toLatex()
+        print ', '.join([l.prepareLatex() for l in self.lexentryreflinks]).encode('utf8')+'%'         
         if len(self.lexentryreflinks)>0:
           print cmd('varblockcloser','')
 
@@ -351,11 +350,10 @@ class VisibleVariantEntryRef ():
       
       def toLatex(self):
           if len(self.lexentryreflinks)>0:
-            print cmd('varblockopener','')
-          for l in self.lexentryreflinks:
-            l.toLatex()
+            print cmd('varofblockopener','')
+          print ','.join([l.prepareLatex() for l in self.lexentryreflinks]).encode('utf8')+'%'            
           if len(self.lexentryreflinks)>0:
-            print cmd('varblockcloser','')
+            print cmd('varofblockcloser','')
         
         
 class LexEntryReflink():
@@ -368,11 +366,12 @@ class LexEntryReflink():
             self.vet='empty'
           self.vet=self.vet.replace('.','').replace(' ','')
           
-    def toLatex(self):
+    def prepareLatex(self):
           latexalt = re.sub('(.*)([0-9]+)$',r'\\textsuperscript{\2}\1', self.alt)
           #latexalt = self.alt.replace('1','\\textsuperscript{1}')
-          s = "\\type%s{\hyperlink{%s}{%s}}%%"%(self.vet,self.target,latexalt)
-          print s.encode('utf8')
+          latexalt = hyphenate(latexalt)
+          s = "\\type%s{\hyperlink{%s}{%s}}"%(self.vet,self.target,latexalt)
+          return s
         
          
 
@@ -387,9 +386,12 @@ class LexEntryReflinkV():
           self.cl = e.find('LexEntryRef_ComponentLexemes/Link').attrib['target']
             
           
-    def toLatex(self):
-          s = " \\type%s{\hyperlink{%s}{%s}}%%"%(self.vet,self.cl,linkd.get(self.cl,'\\error{no label for link!}'))
-          print s.encode('utf8')
+    def prepareLatex(self):
+          s = " \\type%s{\hyperlink{%s}{%s}}"%(self.vet,
+                                              self.cl,
+                                              hyphenate(linkd[self.cl]))
+          return s
+            
                 
 
 #===================
