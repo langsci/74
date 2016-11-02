@@ -1,2 +1,1 @@
-# 74Brindle
-A dictionary and grammatical outline of Chakali}
+A dictionary and grammatical outline of Chakali
