@@ -1,0 +1,232 @@
+% add all extra packages you need to load to this file 
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+\usepackage{amsmath}
+\usepackage{multicol}
+%\usepackage{fancyhdr}
+\usepackage{lipsum}
+
+
+%\usepackage[colorinlistoftodos]{todonotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%           Examples                           %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% remove the percentage signs in the following lines
+% if your book makes use of linguistic examples
+\usepackage{lsp-gb4e} 
+%% to add additional information to the right of examples, uncomment the following line
+% \usepackage{jambox}
+%% if you want the source line of examples to be in italics, uncomment the following line
+% \def\exfont{\it}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%      Optimality Theory                       %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If you are using OT, uncomment the following lines      
+% % OT pointing hand
+% \usepackage{pifont}
+% \newcommand{\hand}{\ding{43}}
+% % OT tableaux                                                
+% \usepackage{pstricks,colortab}    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%       Attribute Value Matrices               %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%If you are using Attribute-Value-Matrices, uncomment the following lines 
+% \usepackage{lsp-avm}
+% \usepackage{avm}
+% \avmfont{\sc} 
+% \avmvalfont{\it} 
+% % command to fontify the type values of an avm 
+% \newcommand{\tpv}[1]{{\avmjvalfont #1}} 
+% % command to fontify the type of an avm and avmspan it
+% \newcommand{\tp}[1]{\avmspan{\tpv{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%     Discourse Representation Structures      %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DRS package by Alexis Dimitriadis
+% \usepackage{drs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%            Chinese Japanese Korean           %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% For Chinese characters, uncomment the following lines
+% \usepackage[indentfirst=false]{xeCJK}
+% \setCJKmainfont{SimSun}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%               Arabic / Persian               %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% for bidirectional text and support for Arabic/Persian, uncomment the following lines
+%% \usepackage{fontspec}
+% \newfontfamily\Parsifont[Script=Arabic]{XB Niloofar}
+% %\usepackage{bidi}
+% \usepackage{lsp-bidi}
+% \newcommand{\PRL}[1]{\RL{\Parsifont #1}}
+% %\TeXXeTOff
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%          Trees                               %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{JBxyling}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%          Generalization Rules                       %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \usepackage{ntheorem}
+  \theorembodyfont{\upshape}
+  
+\newtheorem{Rule}{Rule}
+\newtheorem{Gen}{Generalization}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%          Vowel Space  diagram                     %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \usepackage{pst-vowel}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%   Tweaking not sure what                  %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ 
+%   \usepackage{subfig, multicol, xtab, lineno, multirow, rotating, booktabs}
+  \usepackage{multicol, xtab, lineno, multirow, rotating, booktabs}
+  \usepackage{subfigure}
+  
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%  Special characters              %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+    \usepackage{arydshln, pifont}
+    
+
+    
+    
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%  Font stuff           %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %\setsansfont{Doulos SIL}		
+%  \setsansfont{FreeSans}       
+%    \setmonofont{FreeMono}
+% 
+% 
+%   \setmainfont[
+%  BoldFont={Linux Libertine O Bold}, 
+%  ItalicFont={Gentium Plus Italic},
+%  BoldItalicFont={Linux Libertine O Bold Italic}
+%  ]{Linux Libertine O}	
+
+
+        
+        \font\W="DejaVu Sans" at 10 pt
+      \font\T ="Doulos SIL" at 10pt
+%     \font\I="Doulos SIL" at 10pt
+%     \font\Q="Doulos SIL" at 9pt
+%       \font\K="Doulos SIL" at 8 pt
+%          \font\S="Doulos SIL:slant=0.1;extend=1" at 10 pt
+%          \font\M="Doulos SIL:slant=0.1;extend=1" at 9pt
+%         \font\F="Doulos SIL:slant=0.1;extend=1" at 8 pt
+
+
+\newcommand{\sls}{\slshape}    
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%  Table -- Thick line (could be changed by toprule, bottomrule, booktabs 
+%%% package)     %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\captionsetup[figure]{position=bottom, font={rm,md}}
+\captionsetup[table]{position=top, font={rm,md}}
+\captionsetup[subtable]{position=top, singlelinecheck=false}
+\DeclareCaptionLabelSeparator{nobreakspace}{\nobreakspace}
+\captionsetup[subfigure]{labelsep=nobreakspace}
+
+\newenvironment{Qtabular}{\begin{tabular}}{ \end{tabular}}
+     \newenvironment{Itabular}{\begin{tabular}}{\end{tabular}}
+     
+%      \renewcommand{\topfraction}{.85}
+% \renewcommand{\bottomfraction}{.7}
+% \renewcommand{\textfraction}{.15}
+% \renewcommand{\floatpagefraction}{.66}
+% \renewcommand{\dbltopfraction}{.66}
+% \renewcommand{\dblfloatpagefraction}{.66}
+
+
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%% LSP surely illegal! But table problems in phonology section    %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}   
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%% Table over 2 pages    %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{xtab}
+
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%% Change font over column table    %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{array}
+     
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%  Abbreviation    %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+%   \usepackage{Scap}
+\usepackage{langsci/styles/langsci-lgr}
+\usepackage[english]{babel}
+
